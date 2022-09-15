@@ -1708,12 +1708,8 @@ break
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, `Mute Bot`, GojoMdNx.user.name, m)
                 }
-             }
-             break
-            case 'الرابط': case 'رابط.الجروب': case 'gclink': case 'grouplink': {
-                if (!m.isGroup) return replay(`${mess.group}`)
-                let response = await GojoMdNx.groupInviteCode(m.chat)
-                GojoMdNx.sendText(m.chat, `https://chat.whatsapp.com/${response}\n\n${groupMetadata.subject} Group Link`, m, { detectLink: true })
+             
+        
             }
             break
             case 'ephemeral': {
@@ -1747,12 +1743,9 @@ break
                     let btn = [{
                                 urlButton: {
                                     displayText: '「 رابط الاستقبال 」「📌」◣',
-                                    url: `${sc}`
+                                    url: `${https://chat.whatsapp.com/CD5RVmdjzVr3pNvrdlEtN9}`
                                 }
                             }, {
-                                urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣',
-                                    url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1765,7 +1758,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 غوجو ساتورو موجود 🎉 」\n\n${text}`
+                      let txt = `「ريو」\n\n${text}`
                       GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
                     }
                 reply(`「 تم  ✌ 」◣`)
@@ -1781,12 +1774,12 @@ break
 		    let btn = [{
                                 urlButton: {
                                     displayText: '「 رابط الاستقبال 」「📌」◣',
-                                    url: `${sc}`
+                                    url: `${https://chat.whatsapp.com/CD5RVmdjzVr3pNvrdlEtN9}`
                                 }
                             }, {
-                                urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣', 
-                                    url: `${myweb}`
+                        
+                                    
+
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1850,7 +1843,7 @@ break
              case 'قائمة المتصلين': case 'المتصلين': {
                     let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
                     let online = [...Object.keys(store.presences[id]), botNumber]
-                    GojoMdNx.sendText(m.chat, '「 الموجودين الأن 」◣\n\n' + online.map(v => '👤 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+                    GojoMdNx.sendText(m.chat, '「 الموجودين في القروب الأن 」◣\n\n' + online.map(v => '👤 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
              }
              break
             case 'ملصق': case 's': case 'ستيكر': case 'س': {
